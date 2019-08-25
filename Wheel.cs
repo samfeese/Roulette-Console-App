@@ -7,7 +7,7 @@ namespace Roulette
 {
     class Wheel
     {
-        string[,] wheelValues = new string[38, 2]{ { "0", "GRN" },{ "1", "RED" },{ "2", "BLK" }, { "3", "RED" }, { "4", "BLK" },
+        readonly static string[,] wheelValues = new string[38 , 2]{ { "0", "GRN" },{ "1", "RED" },{ "2", "BLK" }, { "3", "RED" }, { "4", "BLK" },
                                                     { "5", "RED" }, { "6", "BLK" }, { "7", "RED" }, { "8", "BLK" }, { "9", "RED" },
                                                         { "10", "BLK" },{ "11", "BLK" },{ "12", "RED" },{ "13", "BLK" },{ "14", "RED" },
                                                             { "15", "BLK" },{ "16", "RED" },{ "17", "BLK" },{ "18", "RED" },{ "19", "BLK" },
@@ -18,17 +18,7 @@ namespace Roulette
         List<string> previousSpinsValue = new List<string>();
         List<string> previousSpinsColor = new List<string>();
 
-        public Wheel()
-        {
-            SetWheelValues();
-        }
-
-        public void SetWheelValues()
-        {
-         
-         
-               
-        }
+        
 
         public (string, string) SpinTheWheel()
         {
@@ -98,6 +88,17 @@ namespace Roulette
             }
             Console.WriteLine("Press ENTER to continue.");
             Console.ReadKey();
+        }
+        public string ShowLastColor()
+        {
+            var lastSpin = previousSpinsColor.Count - 1;
+            return previousSpinsColor[lastSpin];
+        }
+        public string ShowLastNumber()
+        {
+
+            var lastSpin = previousSpinsColor.Count - 1;
+            return previousSpinsValue[lastSpin];
         }
 
 

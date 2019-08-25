@@ -10,6 +10,8 @@ namespace Roulette
 
         public static void MakeTable()
         {
+            Console.WriteLine(  );
+            Console.WriteLine();
             
             Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.White;
@@ -54,7 +56,7 @@ namespace Roulette
             Console.Write("31"); Console.BackgroundColor = ConsoleColor.Red; Console.Write("32"); Console.BackgroundColor = ConsoleColor.Black; Console.WriteLine("33");
 
             Console.BackgroundColor = ConsoleColor.Red;
-            Console.Write("34"); Console.BackgroundColor = ConsoleColor.Black; Console.Write("35"); Console.BackgroundColor = ConsoleColor.Red; Console.WriteLine("36");
+            Console.Write("34"); Console.BackgroundColor = ConsoleColor.Black; Console.Write("35"); Console.BackgroundColor = ConsoleColor.Red; Console.WriteLine("36"); Console.BackgroundColor = ConsoleColor.Black;
 
 
 
